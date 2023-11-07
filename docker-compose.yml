@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nodewot:
-    image: itaru2622/nodewot:bullseye
+    image: itaru2622/nodewot:bookworm
     container_name: nodewot
     hostname: nodewot
     environment:
@@ -21,5 +21,5 @@ services:
         - http_proxy=${http_proxy}
         - https_proxy=${http_proxy}
         - no_proxy=${no_proxy}
-        - REL=${REL:-master}
-        - base=${base:-node:18-bullseye}
+        - REPO=${REPO:-https://github.com/eclipse/thingweb.node-wot.git -b master}
+        - base=${base:-node:18-bookworm}

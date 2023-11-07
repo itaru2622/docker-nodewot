@@ -5,8 +5,8 @@ ARG base
 RUN apt update; apt install -y git build-essential bash-completion jq
 RUN npm install -g npm
 
-ARG REL=master
-RUN ( git clone https://github.com/eclipse/thingweb.node-wot.git -b ${REL} /opt/node-wot; \
+ARG REPO=https://github.com/eclipse/thingweb.node-wot.git -b master
+RUN ( git clone ${REPO} /opt/node-wot; \
       cd /opt/node-wot; \
          npm install;   \
          npm run build; \
