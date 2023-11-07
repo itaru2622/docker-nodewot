@@ -1,4 +1,4 @@
-ARG base=node:18-bullseye
+ARG base=node:18-bookworm
 FROM ${base}
 ARG base
 
